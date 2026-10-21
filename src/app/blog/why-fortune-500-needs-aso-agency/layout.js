@@ -1,4 +1,5 @@
 import { postMetadata } from "../postMetadata";
+import PostSchema from "../PostSchema";
 
 const baseMetadata = {
   title: "Why Every Fortune 500 Needs a Specialized App Store Optimization Agency in 2026",
@@ -8,5 +9,10 @@ const baseMetadata = {
 export const metadata = postMetadata("why-fortune-500-needs-aso-agency", baseMetadata);
 
 export default function FortuneSOOASOAgencyLayout({ children }) {
-  return <>{children}</>;
+  return (
+    <>
+      <PostSchema slug="why-fortune-500-needs-aso-agency" />
+      {children}
+    </>
+  );
 }

@@ -1,4 +1,5 @@
 import { postMetadata } from "../postMetadata";
+import PostSchema from "../PostSchema";
 
 const baseMetadata = {
   title: "Building an App Review Management Strategy That Scales | ASOWin",
@@ -9,5 +10,10 @@ const baseMetadata = {
 export const metadata = postMetadata("app-review-management-strategy", baseMetadata);
 
 export default function AppReviewManagementStrategyLayout({ children }) {
-  return <>{children}</>;
+  return (
+    <>
+      <PostSchema slug="app-review-management-strategy" />
+      {children}
+    </>
+  );
 }

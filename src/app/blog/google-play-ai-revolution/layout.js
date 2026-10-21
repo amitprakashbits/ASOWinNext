@@ -1,4 +1,5 @@
 import { postMetadata } from "../postMetadata";
+import PostSchema from "../PostSchema";
 
 const baseMetadata = {
   title: "Google Play's AI Revolution: PlayTime 2025 Key Announcements | ASOWin Blog",
@@ -8,5 +9,10 @@ const baseMetadata = {
 export const metadata = postMetadata("google-play-ai-revolution", baseMetadata);
 
 export default function GooglePlayAIRevolutionLayout({ children }) {
-  return <>{children}</>;
+  return (
+    <>
+      <PostSchema slug="google-play-ai-revolution" />
+      {children}
+    </>
+  );
 }

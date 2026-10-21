@@ -1,4 +1,5 @@
 import { blogPosts } from "./blogData";
+import { toIsoDate } from "./PostSchema";
 
 export function postMetadata(slug, base) {
   const post = blogPosts.find((item) => item.slug === slug);
@@ -14,6 +15,8 @@ export function postMetadata(slug, base) {
       siteName: "ASOWin",
       title: base.title,
       description: base.description,
+      publishedTime: post ? toIsoDate(post.publishedAt || post.date) : undefined,
+      authors: post && post.author ? [post.author] : undefined,
       images,
     },
     twitter: {

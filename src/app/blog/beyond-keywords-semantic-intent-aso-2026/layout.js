@@ -1,4 +1,5 @@
 import { postMetadata } from "../postMetadata";
+import PostSchema from "../PostSchema";
 
 const baseMetadata = {
   title: "Beyond Keywords: Why Your 2026 App Store Optimization Service Must Prioritize Semantic Intent | ASOWin Blog",
@@ -8,5 +9,10 @@ const baseMetadata = {
 export const metadata = postMetadata("beyond-keywords-semantic-intent-aso-2026", baseMetadata);
 
 export default function BeyondKeywordsSemanticsASO2026Layout({ children }) {
-  return <>{children}</>;
+  return (
+    <>
+      <PostSchema slug="beyond-keywords-semantic-intent-aso-2026" />
+      {children}
+    </>
+  );
 }

@@ -1,4 +1,5 @@
 import { postMetadata } from "../postMetadata";
+import PostSchema from "../PostSchema";
 
 const baseMetadata = {
   title: "10 ChatGPT Prompts Every ASO Manager Should Be Using | ASOWin",
@@ -9,5 +10,10 @@ const baseMetadata = {
 export const metadata = postMetadata("chatgpt-prompts-for-aso", baseMetadata);
 
 export default function ChatgptPromptsForAsoLayout({ children }) {
-  return <>{children}</>;
+  return (
+    <>
+      <PostSchema slug="chatgpt-prompts-for-aso" />
+      {children}
+    </>
+  );
 }

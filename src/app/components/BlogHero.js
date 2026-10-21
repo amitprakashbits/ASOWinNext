@@ -4,6 +4,12 @@ import Navbar from "./Navbar";
 import Link from "next/link";
 import { slugifyAuthor } from "../blog/blogData";
 
+const toIso = (value) => {
+  if (!value) return undefined;
+  const d = new Date(/^\d{4}-\d{2}-\d{2}/.test(value) ? value : `${value} UTC`);
+  return Number.isNaN(d.getTime()) ? undefined : d.toISOString().slice(0, 10);
+};
+
 const BlogHero = ({ category, date, title, description, author, authorAvatar, readTime, heroImage }) => {
   const isKhwahishKapoor = author === "Khwahish Kapoor";
   const authorSlug = isKhwahishKapoor ? slugifyAuthor(author) : null;
@@ -25,9 +31,9 @@ const BlogHero = ({ category, date, title, description, author, authorAvatar, re
                   </span>
                 )}
                 {date && (
-                  <span className="text-sm text-gray-500">
+                  <time dateTime={toIso(date)} className="text-sm text-gray-500">
                     {date}
-                  </span>
+                  </time>
                 )}
               </div>
 

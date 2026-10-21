@@ -1,4 +1,5 @@
 import { postMetadata } from "../postMetadata";
+import PostSchema from "../PostSchema";
 
 const baseMetadata = {
   title: "Google App Campaigns Best Practices for Higher ROAS | ASOWin",
@@ -9,5 +10,10 @@ const baseMetadata = {
 export const metadata = postMetadata("google-app-campaigns-best-practices", baseMetadata);
 
 export default function GoogleAppCampaignsBestPracticesLayout({ children }) {
-  return <>{children}</>;
+  return (
+    <>
+      <PostSchema slug="google-app-campaigns-best-practices" />
+      {children}
+    </>
+  );
 }

@@ -1,4 +1,5 @@
 import { postMetadata } from "../postMetadata";
+import PostSchema from "../PostSchema";
 
 const baseMetadata = {
   title: "ASO for E-commerce Apps: Turning Browsers Into Buyers | ASOWin",
@@ -9,5 +10,10 @@ const baseMetadata = {
 export const metadata = postMetadata("ecommerce-app-aso-strategies", baseMetadata);
 
 export default function EcommerceAppASOStrategiesLayout({ children }) {
-  return <>{children}</>;
+  return (
+    <>
+      <PostSchema slug="ecommerce-app-aso-strategies" />
+      {children}
+    </>
+  );
 }

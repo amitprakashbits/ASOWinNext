@@ -1,4 +1,5 @@
 import { postMetadata } from "../postMetadata";
+import PostSchema from "../PostSchema";
 
 const baseMetadata = {
   title: "ASO for Emerging Markets: Balancing App Size vs. Feature Richness in 2026 | ASOWin Blog",
@@ -8,5 +9,10 @@ const baseMetadata = {
 export const metadata = postMetadata("aso-emerging-markets-app-size-2026", baseMetadata);
 
 export default function ASOEmergingMarketsAppSize2026Layout({ children }) {
-  return <>{children}</>;
+  return (
+    <>
+      <PostSchema slug="aso-emerging-markets-app-size-2026" />
+      {children}
+    </>
+  );
 }

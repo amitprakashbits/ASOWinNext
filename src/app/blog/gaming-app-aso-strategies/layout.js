@@ -1,4 +1,5 @@
 import { postMetadata } from "../postMetadata";
+import PostSchema from "../PostSchema";
 
 const baseMetadata = {
   title: "ASO Strategies for Mobile Games: A Complete Playbook | ASOWin",
@@ -9,5 +10,10 @@ const baseMetadata = {
 export const metadata = postMetadata("gaming-app-aso-strategies", baseMetadata);
 
 export default function GamingAppAsoStrategiesLayout({ children }) {
-  return <>{children}</>;
+  return (
+    <>
+      <PostSchema slug="gaming-app-aso-strategies" />
+      {children}
+    </>
+  );
 }

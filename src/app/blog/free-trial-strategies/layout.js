@@ -1,4 +1,5 @@
 import { postMetadata } from "../postMetadata";
+import PostSchema from "../PostSchema";
 
 const baseMetadata = {
   title: "Aligning Free Trial Strategies with Usage Patterns | ASOWin Blog",
@@ -8,5 +9,10 @@ const baseMetadata = {
 export const metadata = postMetadata("free-trial-strategies", baseMetadata);
 
 export default function FreeTrialStrategiesLayout({ children }) {
-  return <>{children}</>;
+  return (
+    <>
+      <PostSchema slug="free-trial-strategies" />
+      {children}
+    </>
+  );
 }

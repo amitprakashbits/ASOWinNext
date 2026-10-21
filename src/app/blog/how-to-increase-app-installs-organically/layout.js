@@ -1,4 +1,5 @@
 import { postMetadata } from "../postMetadata";
+import PostSchema from "../PostSchema";
 
 const baseMetadata = {
   title: "How to Increase App Installs Organically: A Data-Driven Guide | ASOWin",
@@ -9,5 +10,10 @@ const baseMetadata = {
 export const metadata = postMetadata("how-to-increase-app-installs-organically", baseMetadata);
 
 export default function HowToIncreaseAppInstallsOrganicallyLayout({ children }) {
-  return <>{children}</>;
+  return (
+    <>
+      <PostSchema slug="how-to-increase-app-installs-organically" />
+      {children}
+    </>
+  );
 }

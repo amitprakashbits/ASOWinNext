@@ -1,4 +1,5 @@
 import { postMetadata } from "../postMetadata";
+import PostSchema from "../PostSchema";
 
 const baseMetadata = {
   title: "Best Strategies to Boost Google Play Store Ranking in 2026 | ASOWin Blog",
@@ -8,5 +9,10 @@ const baseMetadata = {
 export const metadata = postMetadata("google-play-ranking-strategies-2026", baseMetadata);
 
 export default function GooglePlayRankingLayout({ children }) {
-  return <>{children}</>;
+  return (
+    <>
+      <PostSchema slug="google-play-ranking-strategies-2026" />
+      {children}
+    </>
+  );
 }

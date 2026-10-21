@@ -1,4 +1,5 @@
 import { postMetadata } from "../postMetadata";
+import PostSchema from "../PostSchema";
 
 const baseMetadata = {
   title: "App Retention vs Acquisition: Why Both Matter for ASO | ASOWin",
@@ -9,5 +10,10 @@ const baseMetadata = {
 export const metadata = postMetadata("app-retention-vs-acquisition", baseMetadata);
 
 export default function AppRetentionVsAcquisitionLayout({ children }) {
-  return <>{children}</>;
+  return (
+    <>
+      <PostSchema slug="app-retention-vs-acquisition" />
+      {children}
+    </>
+  );
 }

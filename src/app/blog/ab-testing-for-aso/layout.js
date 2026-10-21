@@ -1,4 +1,5 @@
 import { postMetadata } from "../postMetadata";
+import PostSchema from "../PostSchema";
 
 const baseMetadata = {
   title: "A/B Testing for ASO: How ASOWin Maximizes Your App's Conversion Rate | ASOWin Blog",
@@ -8,5 +9,10 @@ const baseMetadata = {
 export const metadata = postMetadata("ab-testing-for-aso", baseMetadata);
 
 export default function ABTestingForASOLayout({ children }) {
-  return <>{children}</>;
+  return (
+    <>
+      <PostSchema slug="ab-testing-for-aso" />
+      {children}
+    </>
+  );
 }

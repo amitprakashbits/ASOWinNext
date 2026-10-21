@@ -1,4 +1,5 @@
 import { postMetadata } from "../postMetadata";
+import PostSchema from "../PostSchema";
 
 const baseMetadata = {
   title: "Apple App Store Ranking Factors for 2026 | ASOWin Blog",
@@ -8,5 +9,10 @@ const baseMetadata = {
 export const metadata = postMetadata("app-store-ranking-factors-2026", baseMetadata);
 
 export default function AppStoreRankingLayout({ children }) {
-  return <>{children}</>;
+  return (
+    <>
+      <PostSchema slug="app-store-ranking-factors-2026" />
+      {children}
+    </>
+  );
 }

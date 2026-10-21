@@ -1,4 +1,5 @@
 import { postMetadata } from "../postMetadata";
+import PostSchema from "../PostSchema";
 
 const baseMetadata = {
   title: "Keyword Density in App Descriptions: How Much Is Too Much? | ASOWin",
@@ -9,5 +10,10 @@ const baseMetadata = {
 export const metadata = postMetadata("keyword-density-app-description", baseMetadata);
 
 export default function KeywordDensityAppDescriptionLayout({ children }) {
-  return <>{children}</>;
+  return (
+    <>
+      <PostSchema slug="keyword-density-app-description" />
+      {children}
+    </>
+  );
 }

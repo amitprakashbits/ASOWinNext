@@ -1,4 +1,5 @@
 import { postMetadata } from "../postMetadata";
+import PostSchema from "../PostSchema";
 
 const baseMetadata = {
   title: "Best Keyword Research Tools for App Store Optimization in 2026 | ASOWin",
@@ -9,5 +10,10 @@ const baseMetadata = {
 export const metadata = postMetadata("keyword-research-tools-for-aso", baseMetadata);
 
 export default function KeywordResearchToolsForASOLayout({ children }) {
-  return <>{children}</>;
+  return (
+    <>
+      <PostSchema slug="keyword-research-tools-for-aso" />
+      {children}
+    </>
+  );
 }

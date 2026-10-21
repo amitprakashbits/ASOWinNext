@@ -1,4 +1,5 @@
 import { postMetadata } from "../postMetadata";
+import PostSchema from "../PostSchema";
 
 const baseMetadata = {
   title: "Paid vs Organic User Acquisition: Finding the Right Balance | ASOWin",
@@ -9,5 +10,10 @@ const baseMetadata = {
 export const metadata = postMetadata("paid-vs-organic-user-acquisition-balance", baseMetadata);
 
 export default function PaidVsOrganicUserAcquisitionBalanceLayout({ children }) {
-  return <>{children}</>;
+  return (
+    <>
+      <PostSchema slug="paid-vs-organic-user-acquisition-balance" />
+      {children}
+    </>
+  );
 }

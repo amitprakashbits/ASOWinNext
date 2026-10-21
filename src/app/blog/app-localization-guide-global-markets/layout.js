@@ -1,4 +1,5 @@
 import { postMetadata } from "../postMetadata";
+import PostSchema from "../PostSchema";
 
 const baseMetadata = {
   title: "App Localization Guide: How to Expand ASO to Global Markets | ASOWin",
@@ -9,5 +10,10 @@ const baseMetadata = {
 export const metadata = postMetadata("app-localization-guide-global-markets", baseMetadata);
 
 export default function AppLocalizationGuideGlobalMarketsLayout({ children }) {
-  return <>{children}</>;
+  return (
+    <>
+      <PostSchema slug="app-localization-guide-global-markets" />
+      {children}
+    </>
+  );
 }

@@ -1,4 +1,5 @@
 import { postMetadata } from "../postMetadata";
+import PostSchema from "../PostSchema";
 
 const baseMetadata = {
   title: "Inside the New ChatGPT App Ecosystem | ASOWin Blog",
@@ -8,5 +9,10 @@ const baseMetadata = {
 export const metadata = postMetadata("chatgpt-app-ecosystem", baseMetadata);
 
 export default function ChatGPTBlogLayout({ children }) {
-  return <>{children}</>;
+  return (
+    <>
+      <PostSchema slug="chatgpt-app-ecosystem" />
+      {children}
+    </>
+  );
 }

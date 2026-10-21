@@ -1,4 +1,5 @@
 import { postMetadata } from "../postMetadata";
+import PostSchema from "../PostSchema";
 
 const baseMetadata = {
   title: "Beyond Exact Match: How Semantic Intent is Redefining ASO in 2026 | ASOWin Blog",
@@ -8,5 +9,10 @@ const baseMetadata = {
 export const metadata = postMetadata("semantic-intent-aso-2026", baseMetadata);
 
 export default function SemanticIntentASO2026Layout({ children }) {
-  return <>{children}</>;
+  return (
+    <>
+      <PostSchema slug="semantic-intent-aso-2026" />
+      {children}
+    </>
+  );
 }

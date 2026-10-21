@@ -1,4 +1,5 @@
 import { postMetadata } from "../postMetadata";
+import PostSchema from "../PostSchema";
 
 const baseMetadata = {
   title: "App Screenshot Design Best Practices That Boost Conversions | ASOWin",
@@ -9,5 +10,10 @@ const baseMetadata = {
 export const metadata = postMetadata("app-screenshot-design-best-practices", baseMetadata);
 
 export default function AppScreenshotDesignBestPracticesLayout({ children }) {
-  return <>{children}</>;
+  return (
+    <>
+      <PostSchema slug="app-screenshot-design-best-practices" />
+      {children}
+    </>
+  );
 }

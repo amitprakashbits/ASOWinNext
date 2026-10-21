@@ -1,4 +1,5 @@
 import { postMetadata } from "../postMetadata";
+import PostSchema from "../PostSchema";
 
 const baseMetadata = {
   title: "How to Create App Store Video Previews That Convert | ASOWin",
@@ -9,5 +10,10 @@ const baseMetadata = {
 export const metadata = postMetadata("app-store-video-preview-guide", baseMetadata);
 
 export default function AppStoreVideoPreviewGuideLayout({ children }) {
-  return <>{children}</>;
+  return (
+    <>
+      <PostSchema slug="app-store-video-preview-guide" />
+      {children}
+    </>
+  );
 }

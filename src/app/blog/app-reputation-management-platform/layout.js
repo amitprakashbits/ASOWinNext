@@ -1,4 +1,5 @@
 import { postMetadata } from "../postMetadata";
+import PostSchema from "../PostSchema";
 
 const baseMetadata = {
   title: "App Reputation Management Platform: Boost Organic Downloads | ASOWin",
@@ -9,5 +10,10 @@ const baseMetadata = {
 export const metadata = postMetadata("app-reputation-management-platform", baseMetadata);
 
 export default function AppReputationManagementLayout({ children }) {
-  return <>{children}</>;
+  return (
+    <>
+      <PostSchema slug="app-reputation-management-platform" />
+      {children}
+    </>
+  );
 }

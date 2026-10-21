@@ -1,4 +1,5 @@
 import { postMetadata } from "../postMetadata";
+import PostSchema from "../PostSchema";
 
 const baseMetadata = {
   title: "The Best ASO Agency for App Growth: What Brands Should Look For | ASOWin",
@@ -9,5 +10,10 @@ const baseMetadata = {
 export const metadata = postMetadata("best-aso-agency-for-app-growth", baseMetadata);
 
 export default function BestASOAgencyAppGrowthLayout({ children }) {
-  return <>{children}</>;
+  return (
+    <>
+      <PostSchema slug="best-aso-agency-for-app-growth" />
+      {children}
+    </>
+  );
 }

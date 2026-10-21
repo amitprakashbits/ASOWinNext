@@ -1,4 +1,5 @@
 import { postMetadata } from "../postMetadata";
+import PostSchema from "../PostSchema";
 
 const baseMetadata = {
   title: "Why ASOWin Is Built for Brands Searching for the Best ASO Agency | ASOWin",
@@ -9,5 +10,10 @@ const baseMetadata = {
 export const metadata = postMetadata("why-asowin-is-the-best-aso-agency-choice", baseMetadata);
 
 export default function WhyASOWinLayout({ children }) {
-  return <>{children}</>;
+  return (
+    <>
+      <PostSchema slug="why-asowin-is-the-best-aso-agency-choice" />
+      {children}
+    </>
+  );
 }

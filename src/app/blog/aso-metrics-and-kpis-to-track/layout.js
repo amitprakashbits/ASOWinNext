@@ -1,4 +1,5 @@
 import { postMetadata } from "../postMetadata";
+import PostSchema from "../PostSchema";
 
 const baseMetadata = {
   title: "Essential ASO Metrics and KPIs Every App Team Should Track | ASOWin",
@@ -9,5 +10,10 @@ const baseMetadata = {
 export const metadata = postMetadata("aso-metrics-and-kpis-to-track", baseMetadata);
 
 export default function AsoMetricsAndKpisToTrackLayout({ children }) {
-  return <>{children}</>;
+  return (
+    <>
+      <PostSchema slug="aso-metrics-and-kpis-to-track" />
+      {children}
+    </>
+  );
 }

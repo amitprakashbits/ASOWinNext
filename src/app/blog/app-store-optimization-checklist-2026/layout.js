@@ -1,4 +1,5 @@
 import { postMetadata } from "../postMetadata";
+import PostSchema from "../PostSchema";
 
 const baseMetadata = {
   title: "The Complete App Store Optimization Checklist for 2026 | ASOWin",
@@ -9,5 +10,10 @@ const baseMetadata = {
 export const metadata = postMetadata("app-store-optimization-checklist-2026", baseMetadata);
 
 export default function AppStoreOptimizationChecklist2026Layout({ children }) {
-  return <>{children}</>;
+  return (
+    <>
+      <PostSchema slug="app-store-optimization-checklist-2026" />
+      {children}
+    </>
+  );
 }

@@ -1,4 +1,5 @@
 import { postMetadata } from "../postMetadata";
+import PostSchema from "../PostSchema";
 
 const baseMetadata = {
   title: "Apple Custom Product Pages: The Complete Guide for 2026 | ASOWin",
@@ -9,5 +10,10 @@ const baseMetadata = {
 export const metadata = postMetadata("custom-product-pages-apple-guide", baseMetadata);
 
 export default function CustomProductPagesAppleGuideLayout({ children }) {
-  return <>{children}</>;
+  return (
+    <>
+      <PostSchema slug="custom-product-pages-apple-guide" />
+      {children}
+    </>
+  );
 }

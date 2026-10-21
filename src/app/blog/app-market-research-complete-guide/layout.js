@@ -1,4 +1,5 @@
 import { postMetadata } from "../postMetadata";
+import PostSchema from "../PostSchema";
 
 const baseMetadata = {
   title: "App Market Research: The Complete Guide for Building Apps That Win | ASOWin Blog",
@@ -8,5 +9,10 @@ const baseMetadata = {
 export const metadata = postMetadata("app-market-research-complete-guide", baseMetadata);
 
 export default function AppMarketResearchLayout({ children }) {
-  return <>{children}</>;
+  return (
+    <>
+      <PostSchema slug="app-market-research-complete-guide" />
+      {children}
+    </>
+  );
 }

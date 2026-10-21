@@ -1,4 +1,5 @@
 import { postMetadata } from "../postMetadata";
+import PostSchema from "../PostSchema";
 
 const baseMetadata = {
   title: "How to Respond to App Store Reviews: Templates and Best Practices | ASOWin",
@@ -9,5 +10,10 @@ const baseMetadata = {
 export const metadata = postMetadata("how-to-respond-to-app-store-reviews", baseMetadata);
 
 export default function HowToRespondToAppStoreReviewsLayout({ children }) {
-  return <>{children}</>;
+  return (
+    <>
+      <PostSchema slug="how-to-respond-to-app-store-reviews" />
+      {children}
+    </>
+  );
 }

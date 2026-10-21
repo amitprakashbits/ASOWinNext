@@ -1,4 +1,5 @@
 import { postMetadata } from "../postMetadata";
+import PostSchema from "../PostSchema";
 
 const baseMetadata = {
   title: "App Store Conversion Rate Optimization: Turning Views Into Installs | ASOWin",
@@ -9,5 +10,10 @@ const baseMetadata = {
 export const metadata = postMetadata("app-store-conversion-rate-optimization", baseMetadata);
 
 export default function AppStoreConversionRateOptimizationLayout({ children }) {
-  return <>{children}</>;
+  return (
+    <>
+      <PostSchema slug="app-store-conversion-rate-optimization" />
+      {children}
+    </>
+  );
 }

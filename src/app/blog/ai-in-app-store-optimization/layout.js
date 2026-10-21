@@ -1,4 +1,5 @@
 import { postMetadata } from "../postMetadata";
+import PostSchema from "../PostSchema";
 
 const baseMetadata = {
   title: "How AI Is Transforming App Store Optimization in 2026 | ASOWin",
@@ -9,5 +10,10 @@ const baseMetadata = {
 export const metadata = postMetadata("ai-in-app-store-optimization", baseMetadata);
 
 export default function AiInAppStoreOptimizationLayout({ children }) {
-  return <>{children}</>;
+  return (
+    <>
+      <PostSchema slug="ai-in-app-store-optimization" />
+      {children}
+    </>
+  );
 }

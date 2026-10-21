@@ -1,4 +1,5 @@
 import { postMetadata } from "../postMetadata";
+import PostSchema from "../PostSchema";
 
 const baseMetadata = {
   title: "App Store Optimization for Fintech Apps: What's Different | ASOWin",
@@ -9,5 +10,10 @@ const baseMetadata = {
 export const metadata = postMetadata("fintech-app-aso-strategies", baseMetadata);
 
 export default function FintechAppASOStrategiesLayout({ children }) {
-  return <>{children}</>;
+  return (
+    <>
+      <PostSchema slug="fintech-app-aso-strategies" />
+      {children}
+    </>
+  );
 }

@@ -1,4 +1,5 @@
 import { postMetadata } from "../postMetadata";
+import PostSchema from "../PostSchema";
 
 const baseMetadata = {
   title: "App Icon Design Tips and Practices | ASOWin Blog",
@@ -8,5 +9,10 @@ const baseMetadata = {
 export const metadata = postMetadata("app-icon-design-tips-and-practices", baseMetadata);
 
 export default function AppIconDesignTipsAndPracticesLayout({ children }) {
-  return <>{children}</>;
+  return (
+    <>
+      <PostSchema slug="app-icon-design-tips-and-practices" />
+      {children}
+    </>
+  );
 }

@@ -1,4 +1,5 @@
 import { postMetadata } from "../postMetadata";
+import PostSchema from "../PostSchema";
 
 const baseMetadata = {
   title: "Apple Search Ads vs Organic ASO: How They Work Together | ASOWin",
@@ -9,5 +10,10 @@ const baseMetadata = {
 export const metadata = postMetadata("apple-search-ads-vs-organic-aso", baseMetadata);
 
 export default function AppleSearchAdsVsOrganicAsoLayout({ children }) {
-  return <>{children}</>;
+  return (
+    <>
+      <PostSchema slug="apple-search-ads-vs-organic-aso" />
+      {children}
+    </>
+  );
 }

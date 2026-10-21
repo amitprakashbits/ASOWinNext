@@ -1,4 +1,5 @@
 import { postMetadata } from "../postMetadata";
+import PostSchema from "../PostSchema";
 
 const baseMetadata = {
   title: "15 Common ASO Mistakes That Are Killing Your App Downloads | ASOWin",
@@ -9,5 +10,10 @@ const baseMetadata = {
 export const metadata = postMetadata("common-aso-mistakes-to-avoid", baseMetadata);
 
 export default function CommonAsoMistakesToAvoidLayout({ children }) {
-  return <>{children}</>;
+  return (
+    <>
+      <PostSchema slug="common-aso-mistakes-to-avoid" />
+      {children}
+    </>
+  );
 }

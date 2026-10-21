@@ -1,4 +1,5 @@
 import { postMetadata } from "../postMetadata";
+import PostSchema from "../PostSchema";
 
 const baseMetadata = {
   title: "How to Find and Rank for Long-Tail Keywords in App Stores | ASOWin",
@@ -9,5 +10,10 @@ const baseMetadata = {
 export const metadata = postMetadata("long-tail-keywords-app-store-optimization", baseMetadata);
 
 export default function LongTailKeywordsAppStoreOptimizationLayout({ children }) {
-  return <>{children}</>;
+  return (
+    <>
+      <PostSchema slug="long-tail-keywords-app-store-optimization" />
+      {children}
+    </>
+  );
 }

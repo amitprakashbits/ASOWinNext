@@ -1,4 +1,5 @@
 import { postMetadata } from "../postMetadata";
+import PostSchema from "../PostSchema";
 
 const baseMetadata = {
   title: "How to Hire an App Store Optimization Expert: 10 Critical Questions | ASOWin",
@@ -9,5 +10,10 @@ const baseMetadata = {
 export const metadata = postMetadata("how-to-hire-app-store-optimization-expert", baseMetadata);
 
 export default function HiringASOExpertLayout({ children }) {
-  return <>{children}</>;
+  return (
+    <>
+      <PostSchema slug="how-to-hire-app-store-optimization-expert" />
+      {children}
+    </>
+  );
 }

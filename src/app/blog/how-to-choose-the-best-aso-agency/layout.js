@@ -1,4 +1,5 @@
 import { postMetadata } from "../postMetadata";
+import PostSchema from "../PostSchema";
 
 const baseMetadata = {
   title: "How to Choose the Best ASO Agency for Your App | ASOWin",
@@ -9,5 +10,10 @@ const baseMetadata = {
 export const metadata = postMetadata("how-to-choose-the-best-aso-agency", baseMetadata);
 
 export default function HowToChooseBestASOAgencyLayout({ children }) {
-  return <>{children}</>;
+  return (
+    <>
+      <PostSchema slug="how-to-choose-the-best-aso-agency" />
+      {children}
+    </>
+  );
 }

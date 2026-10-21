@@ -1,4 +1,5 @@
 import { postMetadata } from "../postMetadata";
+import PostSchema from "../PostSchema";
 
 const baseMetadata = {
   title: "How to Automate ASO Reporting and Save Hours Every Week | ASOWin",
@@ -9,5 +10,10 @@ const baseMetadata = {
 export const metadata = postMetadata("automate-aso-reporting-with-ai", baseMetadata);
 
 export default function AutomateAsoReportingWithAiLayout({ children }) {
-  return <>{children}</>;
+  return (
+    <>
+      <PostSchema slug="automate-aso-reporting-with-ai" />
+      {children}
+    </>
+  );
 }

@@ -1,4 +1,5 @@
 import { postMetadata } from "../postMetadata";
+import PostSchema from "../PostSchema";
 
 const baseMetadata = {
   title: "Why US Apps Need a Local App Store Optimization Agency | ASOWin",
@@ -9,5 +10,10 @@ const baseMetadata = {
 export const metadata = postMetadata("aso-agency-usa-guide", baseMetadata);
 
 export default function AsoAgencyUsaGuideLayout({ children }) {
-  return <>{children}</>;
+  return (
+    <>
+      <PostSchema slug="aso-agency-usa-guide" />
+      {children}
+    </>
+  );
 }

@@ -1,4 +1,5 @@
 import { postMetadata } from "../postMetadata";
+import PostSchema from "../PostSchema";
 
 const baseMetadata = {
   title: "ASO Strategies for Winning the Indian App Market | ASOWin",
@@ -9,5 +10,10 @@ const baseMetadata = {
 export const metadata = postMetadata("aso-for-indian-app-market", baseMetadata);
 
 export default function AsoForIndianAppMarketLayout({ children }) {
-  return <>{children}</>;
+  return (
+    <>
+      <PostSchema slug="aso-for-indian-app-market" />
+      {children}
+    </>
+  );
 }

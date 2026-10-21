@@ -1,4 +1,5 @@
 import { postMetadata } from "../postMetadata";
+import PostSchema from "../PostSchema";
 
 const baseMetadata = {
   title: "Full-Cycle App Store Optimization Service: Keyword Research to Conversion",
@@ -8,5 +9,10 @@ const baseMetadata = {
 export const metadata = postMetadata("full-cycle-aso-service-keyword-research-conversion", baseMetadata);
 
 export default function FullCycleASOServiceLayout({ children }) {
-  return <>{children}</>;
+  return (
+    <>
+      <PostSchema slug="full-cycle-aso-service-keyword-research-conversion" />
+      {children}
+    </>
+  );
 }

@@ -1,4 +1,5 @@
 import { postMetadata } from "../postMetadata";
+import PostSchema from "../PostSchema";
 
 const baseMetadata = {
   title: "How Review Sentiment Analysis Became a Direct Ranking Factor in 2026 | ASOWin Blog",
@@ -8,5 +9,10 @@ const baseMetadata = {
 export const metadata = postMetadata("review-sentiment-analysis-ranking-factor", baseMetadata);
 
 export default function ReviewSentimentAnalysisRankingFactorLayout({ children }) {
-  return <>{children}</>;
+  return (
+    <>
+      <PostSchema slug="review-sentiment-analysis-ranking-factor" />
+      {children}
+    </>
+  );
 }

@@ -1,4 +1,5 @@
 import { postMetadata } from "../postMetadata";
+import PostSchema from "../PostSchema";
 
 const baseMetadata = {
   title: "Google Play Custom Store Listings: A Step-by-Step Guide | ASOWin",
@@ -9,5 +10,10 @@ const baseMetadata = {
 export const metadata = postMetadata("google-play-custom-store-listings-guide", baseMetadata);
 
 export default function GooglePlayCustomStoreListingsGuideLayout({ children }) {
-  return <>{children}</>;
+  return (
+    <>
+      <PostSchema slug="google-play-custom-store-listings-guide" />
+      {children}
+    </>
+  );
 }

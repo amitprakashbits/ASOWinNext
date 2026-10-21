@@ -1,4 +1,5 @@
 import { postMetadata } from "../postMetadata";
+import PostSchema from "../PostSchema";
 
 const baseMetadata = {
   title: "iOS vs Android ASO: Key Differences Every App Marketer Should Know | ASOWin",
@@ -9,5 +10,10 @@ const baseMetadata = {
 export const metadata = postMetadata("ios-vs-android-aso-differences", baseMetadata);
 
 export default function IosVsAndroidAsoDifferencesLayout({ children }) {
-  return <>{children}</>;
+  return (
+    <>
+      <PostSchema slug="ios-vs-android-aso-differences" />
+      {children}
+    </>
+  );
 }
